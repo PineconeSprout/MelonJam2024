@@ -7,7 +7,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
 {
     [SerializeField] private GameObject table;
     private int currentTablePosition;
-    private bool isAtTable = false;
+    [SerializeField] private bool isAtTable = false;
     public bool isDragged=false;
     private CanvasGroup canvasGroup;
 
