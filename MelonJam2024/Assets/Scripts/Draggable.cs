@@ -3,23 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerDownHandler
 {
     private bool isDragged=false;
+    private CanvasGroup canvasGroup;
+
+    private void Awake(){
+        canvasGroup = GetComponent<CanvasGroup>();
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Begin Drag");
+        canvasGroup.alpha=.6f;
+        canvasGroup.blocksRaycasts=false;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Dragging");
+        transform.position=Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("End drag");
+        canvasGroup.alpha=1f;
+        canvasGroup.blocksRaycasts=true;
     }
-    
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("Pointer down");
+    }
 }
