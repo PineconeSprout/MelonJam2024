@@ -272,14 +272,23 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.972549
       objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: nameID
+      value: PersonC
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: cannotSitNextTo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: 'cannotSitNextTo.Array.data[0]'
+      value: PersonB
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7477435652373693437, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 455275910}
     - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 455275909}
@@ -340,25 +349,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &455275910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 455275908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78fc935ed0b084cb6aa1af47f327c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameID: PersonC
-  cannotFace: []
-  cannotSitNextTo:
-  - PersonB
-  mustFace: []
-  mustSitNextTo: []
-  mustSitAtHead: 0
 --- !u!1 &516370285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,24 +1025,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1151206350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151206338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78fc935ed0b084cb6aa1af47f327c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameID: PersonA
-  cannotFace: []
-  cannotSitNextTo: []
-  mustFace: []
-  mustSitNextTo: []
-  mustSitAtHead: 1
 --- !u!1001 &1159106500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1373,14 +1345,23 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.8666667
       objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: nameID
+      value: PersonD
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: cannotFace.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: 'cannotFace.Array.data[0]'
+      value: PersonC
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7477435652373693437, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1387064642}
     - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1387064641}
@@ -1441,25 +1422,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1387064642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387064640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78fc935ed0b084cb6aa1af47f327c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameID: PersonD
-  cannotFace:
-  - PersonC
-  cannotSitNextTo: []
-  mustFace: []
-  mustSitNextTo: []
-  mustSitAtHead: 0
 --- !u!1 &1551163960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,14 +1792,23 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.61960787
       objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: nameID
+      value: PersonB
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: cannotFace.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: 'cannotFace.Array.data[0]'
+      value: PersonD
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7477435652373693437, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1940983103}
     - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1940983102}
@@ -1898,25 +1869,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1940983103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940983101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac78fc935ed0b084cb6aa1af47f327c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameID: PersonB
-  cannotFace:
-  - PersonD
-  cannotSitNextTo: []
-  mustFace: []
-  mustSitNextTo: []
-  mustSitAtHead: 0
 --- !u!224 &1977572029 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1040394239627682537, guid: c93ceab769ca9424593ad32e2a9fcf44, type: 3}
@@ -2122,7 +2074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5129517220969086145, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -424.7
+      value: -408
       objectReference: {fileID: 0}
     - target: {fileID: 5129517220969086145, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2152,14 +2104,19 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6306946
       objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: nameID
+      value: PersonA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319064137426120150, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+      propertyPath: mustSitAtHead
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7477435652373693437, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1151206350}
     - targetCorrespondingSourceObject: {fileID: 4082689240196732844, guid: 97c9a9fe81b1d3b499ebb8ae8ef4a874, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1151206345}

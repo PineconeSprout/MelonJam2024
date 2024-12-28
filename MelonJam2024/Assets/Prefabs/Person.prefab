@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5129517220969086145}
   - component: {fileID: 5532860850404660387}
   - component: {fileID: 3907378221843305400}
-  - component: {fileID: 7477435652373693437}
+  - component: {fileID: 8319064137426120150}
   - component: {fileID: 7894081411783967782}
   - component: {fileID: 5871072528488212575}
   m_Layer: 5
@@ -60,8 +60,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55bb9d78bbd4da94dadbfbd6d0748d16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  table: {fileID: 0}
   isDragged: 0
---- !u!114 &7477435652373693437
+--- !u!114 &8319064137426120150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,15 +71,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4082689240196732844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2ac8ba8c75f144cb5771ab4bc14d6f, type: 3}
+  m_Script: {fileID: 11500000, guid: ac78fc935ed0b084cb6aa1af47f327c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  roamingTime: 3
-  detectionRadius: 2
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  nameID: DefaultPrefab
+  cannotFace: []
+  cannotSitNextTo: []
+  mustFace: []
+  mustSitNextTo: []
+  mustSitAtHead: 0
 --- !u!114 &7894081411783967782
 MonoBehaviour:
   m_ObjectHideFlags: 0

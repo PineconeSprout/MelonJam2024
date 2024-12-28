@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerDownHandler
 {
     [SerializeField] private GameObject table;
-     int currentTablePosition;
-    bool isAtTable = false;
+    private int currentTablePosition;
+    private bool isAtTable = false;
     public bool isDragged=false;
     private CanvasGroup canvasGroup;
 
