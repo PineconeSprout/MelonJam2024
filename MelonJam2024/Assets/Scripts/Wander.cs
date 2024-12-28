@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Wander : MonoBehaviour
 {
-    public float speed = 2f; // Movement speed
+    public float speed = 50f; // Movement speed
     public float roamingTime = 3f; // Time before changing direction
     public float detectionRadius = 2f; // How far to check for obstacles (e.g. table)
     public LayerMask obstacleLayer; // Define obstacles (the table in this case)
@@ -18,7 +18,7 @@ public class Wander : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!draggableScript.isDragged)
+        if (!draggableScript.isDragged && !draggableScript.IsAtTable())
         {
             // Timer for roaming
             timer -= Time.deltaTime;
@@ -43,15 +43,5 @@ public class Wander : MonoBehaviour
     {
         transform.Translate(movementDirection * speed * Time.deltaTime);
     }
-    // Called when the person collides with an obstacle
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        // Check if the collision is with an obstacle
-        Debug.Log("Collision detected");
-        if (((1 << collision.gameObject.layer) & obstacleLayer) != 0)
-        {
-            // If an obstacle is detected, choose a new random direction
-            SetRandomDirection();
-        }
-    }
+    
 }
