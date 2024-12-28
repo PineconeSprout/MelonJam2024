@@ -4,9 +4,13 @@ public class Table : MonoBehaviour
 {
     [SerializeField] int tableSize = 4;
     [SerializeField] GameObject[] peopleAtTable;
+    [SerializeField] GameObject winningScreen;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if(winningScreen != null)
+           winningScreen.SetActive(false);
+
         peopleAtTable = new GameObject[tableSize];
     }
 
@@ -15,6 +19,8 @@ public class Table : MonoBehaviour
     {
         if(CheckEveryonesContraintsMet()){
                 Debug.Log("Everyone at the table is happy");
+                if(winningScreen != null)
+                   winningScreen.SetActive(true);
         }        
     }
 
@@ -34,7 +40,7 @@ public class Table : MonoBehaviour
 
         for(int i = 0; i < peopleAtTable.Length;i++){
             if(peopleAtTable[i] == null){
-                Debug.Log("Table not full");
+                //Debug.Log("Table not full");
                 return false;
             } 
 
