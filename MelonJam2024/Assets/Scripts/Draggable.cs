@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerDownHandler
 {
-    private bool isDragged=false;
+    public bool isDragged=false;
     private CanvasGroup canvasGroup;
 
     private void Awake(){
@@ -15,6 +15,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin Drag");
+        isDragged=true;
         canvasGroup.alpha=.6f;
         canvasGroup.blocksRaycasts=false;
     }
@@ -28,6 +29,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("End drag");
+        isDragged=false;
         canvasGroup.alpha=1f;
         canvasGroup.blocksRaycasts=true;
     }
