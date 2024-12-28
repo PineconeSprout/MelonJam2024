@@ -14,8 +14,20 @@ public class Table : MonoBehaviour
     void Update()
     {
         if(CheckEveryonesContraintsMet()){
-                Debug.Log("True");
+                Debug.Log("Everyone at the table is happy");
         }        
+    }
+
+    public void AddPersonToTable(GameObject person, int position){
+        if(position < tableSize){
+            peopleAtTable[position] = person;
+        }
+    }
+
+    public void RemovePersonFromTable(int position){
+        if(position < tableSize){
+            peopleAtTable[position] = null;
+        }       
     }
 
     bool CheckEveryonesContraintsMet(){

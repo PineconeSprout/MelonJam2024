@@ -5,6 +5,9 @@ using UnityEngine.EventSystems;
 
 public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerDownHandler
 {
+    [SerializeField] private GameObject table;
+     int currentTablePosition;
+    bool isAtTable = false;
     public bool isDragged=false;
     private CanvasGroup canvasGroup;
 
@@ -18,6 +21,10 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
         isDragged=true;
         canvasGroup.alpha=.6f;
         canvasGroup.blocksRaycasts=false;
+        if(table != null && isAtTable){
+                table.GetComponent<Table>().RemovePersonFromTable(currentTablePosition);
+                isAtTable = false;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -37,5 +44,21 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDra
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Pointer down");
+    }
+
+    public int GetCurrentTablePosition(){
+        return currentTablePosition;
+    }
+
+    public void SetCurrentTablePosition(int position){
+        currentTablePosition = position;
+    }
+
+    public bool IsAtTable(){
+        return isAtTable;
+    }
+
+    public void SetIsAtTable(bool sittingAtTable){
+        isAtTable = sittingAtTable;
     }
 }
